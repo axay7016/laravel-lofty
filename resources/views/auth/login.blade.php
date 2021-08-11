@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
 
     <!-- App css -->
+    <link href="{{ asset('assets/css/developer.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/app-modern.min.css') }}" rel="stylesheet" type="text/css" id="light-style" />
     <link href="{{ asset('assets/css/app-modern-dark.min.css') }}" rel="stylesheet" type="text/css" id="dark-style" />
@@ -40,7 +41,7 @@
                                     <x-auth-session-status class="mb-4" :status="session('status')" />
 
                                     <!-- Validation Errors -->
-                                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                                    <x-auth-validation-errors class="mb-4 error-message" :errors="$errors" />
                                 </p>
                             </div>
 

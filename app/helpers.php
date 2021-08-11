@@ -41,7 +41,7 @@ function getSalesLoftUsers($updateDate, $page){
     }
 
 //salesloft people api
-function getSalesLoftPeople($cadenceId){
-    $response = Http::withToken(env("SALESLOFT_API_KEY"))->get('https://api.salesloft.com/v2/people.json?include_paging_counts=true&cadence_id%5B%5D='.$cadenceId.'');
+function getSalesLoftPeople($cadenceId,$f_date,$l_date){
+    $response = Http::withToken(env("SALESLOFT_API_KEY"))->get('https://api.salesloft.com/v2/people.json?include_paging_counts=true&updated_at%5Bgte%5D='.$f_date.'&updated_at%5Blte%5D='.$l_date.'&cadence_id%5B%5D='.$cadenceId.'');
     return $response;
 }

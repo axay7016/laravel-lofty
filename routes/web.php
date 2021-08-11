@@ -42,9 +42,16 @@ Route::get('delete/{id}',[UserRoleController::class,'deleteRole'] )->middleware(
 //show-data in form(update)
 Route::get('update/{id}',[UserRoleController::class,'showUpdateRole'] )->middleware(['auth'])->name('updateid');
 
-//Report cadence,executiv
+//Report cadence,executiv,singlerep
 Route::get('sl/cadencereport',[SalesloftReport::class,'slCadenceReport'] )->middleware(['auth'])->name('cadencereport');
 Route::get('sl/executivereport',[SalesloftReport::class,'slExecutiveReport'] )->middleware(['auth'])->name('executivereport');
+Route::get('sl/singlerepreport',[SalesloftReport::class,'slSingleRepReport'] )->middleware(['auth'])->name('singlerep');
+
+
+//Filter Data
+Route::get('sl/cadencefilter',[SalesloftReport::class,'cadenceFilter'] )->middleware(['auth'])->name('filter.cadence');
+Route::get('sl/executivefilter',[SalesloftReport::class,'executiveFilter'] )->middleware(['auth'])->name('filter.executive');
+Route::get('sl/singlerepfilter',[SalesloftReport::class,'singlerepFilter'] )->middleware(['auth'])->name('filter.singlerep');
 
 //redirection home and sl 
 if(Route::currentRouteName() == '' || Route::currentRouteName() == '/sl'){

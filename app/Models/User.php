@@ -52,11 +52,13 @@ class User extends Authenticatable
                         ->paginate($limit);
        return $userdata;
     }
+    
     //adduser
     public function addUser($data){
         $adduser = User::insert($data);
         return $adduser;
     }
+
     //update user
     public function updateUser($id,$data){
         $updateuser = User::where('id',$id)->update($data);

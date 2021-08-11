@@ -44,6 +44,9 @@
                     <li>
                         <a href="{{route('executivereport')}}"><i class="uil-chart-line"></i>Executive Report</a>
                     </li>
+                    <li>
+                        <a href="{{route('singlerep')}}"><i class="uil-chart-line"></i>Reps Report</a>
+                    </li>
                 </ul>
             </div>
         </li>
