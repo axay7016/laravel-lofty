@@ -1,0 +1,51 @@
+
+/* .adduserbtn {
+    float: right;
+    margin-top: 18px;
+} */
+
+.searchinput {
+    width: auto !important;
+    float: right;
+    margin-left: 35px;
+}
+
+.uil-users-alt,.uil-user-plus,.uil-chart-line {
+    margin-right: 10px;
+}
+
+.show-entries{
+    float:left;
+}
+svg.w-5.h-5 {
+    width: 1%;
+}
+
+.pagination .page-link {
+    border-radius: 50% !important;
+    border:none;
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+}
+
+.pagination{
+    float:right;
+    /* margin-top: 15px; */
+}
+
+label.form-label.show-entries {
+    display: flex;
+    align-items: center;
+}
+select#show-entries {
+    margin: 0 5px 0 5px;
+}
+.user-pagination {
+    width: 50%;
+    float: left;
+}
+
+/* table.dataTable tbody tr.selected {
+     color: unset; 
+} */
